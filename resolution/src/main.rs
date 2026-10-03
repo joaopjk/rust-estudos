@@ -78,6 +78,22 @@ fn main() {
     // Funções
     println!("Dobro de 5 é {}", dobro(5));
     println!("Maior número entre 5 e 6 é {}", maior(5, 6));
+    println!("{}", alguma_fn(1.0, 2));
+
+    // For
+    for i in 1..10 {
+        println!("O número está variando {}", i);
+    }
+
+    let faixa = 1..20;
+    for i in faixa {
+        println!("O número está variando {}", i);
+    }
+
+    let animais = vec!["Coelho", "Gato", "Macaco"];
+    for i in animais {
+        println!("Animal {}", i);
+    }
 }
 
 fn convert_to_int(data_input: &String) -> i32 {
@@ -95,4 +111,9 @@ fn maior(a: i32, b: i32) -> i32 {
     }
 
     b
+}
+
+fn alguma_fn(par_a: f32, par_b: i128) -> f32 {
+    println!("Devolve um valor flutuante");
+    10.1 * par_a * par_b as f32
 }
