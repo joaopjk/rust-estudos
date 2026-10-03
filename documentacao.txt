@@ -1,0 +1,2 @@
+﻿cargo unit -- iniciar o projeto
+Variáveis em rust são imutáveis
