@@ -16,5 +16,13 @@ fn main() {
     println!("{},{},{},{}", x, y, f, b);
 
     // Fluxo de controle
-    
+    let number1 = 24;
+    let number2 = 42;
+
+    if number1 > number2 {
+        println!("{} is greater than {}", number1, number2);
+    }
+    else {
+        println!("{} is less than {}", number1, number2);
+    }
 }
