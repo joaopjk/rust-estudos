@@ -69,12 +69,30 @@ fn main() {
     let mut entrada_int = convert_to_int(&entrada_fatorial);
 
     while entrada_int > 1 {
-        fatorial = fatorial * convert_to_int(&entrada_fatorial);
+        fatorial = fatorial * entrada_int;
         entrada_int = entrada_int - 1;
     }
+
+    println!("O fatorial {}", fatorial);
+
+    // Funções
+    println!("Dobro de 5 é {}", dobro(5));
+    println!("Maior número entre 5 e 6 é {}", maior(5, 6));
 }
 
 fn convert_to_int(data_input: &String) -> i32 {
     let x = data_input.trim().parse::<i32>().unwrap();
     x
+}
+
+fn dobro(number: i32) -> i32 {
+    number * 2
+}
+
+fn maior(a: i32, b: i32) -> i32 {
+    if a >= b {
+        return a;
+    }
+
+    b
 }
