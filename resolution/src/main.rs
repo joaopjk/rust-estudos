@@ -1,3 +1,5 @@
+use std::io;
+
 fn main() {
     let name: &str = "João Cícero"; // Variável imutável
     let mut age = 31;
@@ -21,8 +23,29 @@ fn main() {
 
     if number1 > number2 {
         println!("{} is greater than {}", number1, number2);
-    }
-    else {
+    } else {
         println!("{} is less than {}", number1, number2);
     }
+
+    // ‘Input’ de dados
+    let mut number3 = String::new();
+    io::stdin()
+        .read_line(&mut number3)
+        .expect("Failed to read line");
+
+    let mut number4 = String::new();
+    io::stdin()
+        .read_line(&mut number4)
+        .expect("Failed to read line");
+
+    if convert_to_int(&number3) > convert_to_int(&number4) {
+        println!("{} is greater than {}", number3, number4);
+    } else {
+        println!("{} is less or equal than {}", number4, number3);
+    }
+}
+
+fn convert_to_int(data_input: &String) -> i32 {
+    let x = data_input.trim().parse::<i32>().unwrap();
+    return x;
 }
