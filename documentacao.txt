@@ -1,2 +1,4 @@
 ﻿cargo unit -- iniciar o projeto
 Variáveis em rust são imutáveis
+
+i8 | i16 | i32 | i64| i128
